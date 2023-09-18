@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article index{% endblock %}
+
+{% block body %}
+    <section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+        <h1>Article index</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quibusdam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-wrapper">
+	<div class="container">
+		<div class="row">
+			
+
+    {# <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Texte</th>
+                <th>Titre</th>
+                <th>actions</th>
+            </tr>
+        </thead> #}
+        <tbody>
+        {% for article in articles %}
+
+            <div class="col-md-6">
+				<div class="post">
+					<div class="post-thumb">
+						<a href="blog-single.html">
+							<img class="img-fluid" src="images/blog/blog-post-1.jpg" alt="">
+						</a>
+					</div>
+					<h3 class="post-title"><a href="blog-single.html">{{ article.Titre }}</a></h3>
+					<div class="post-meta">
+						<ul>
+							<li>
+								<i class="ion-calendar"></i> {{ article.id }}
+							</li>
+							<li>
+								<i class="ion-android-people"></i> POSTED BY {{ article.utilisateur }}
+							</li>
+							<li>
+								<a href="blog-grid.html"><i class="ion-pricetags"></i> {{ article.categorie }}</a>
+							</li>
+						</ul>
+					</div>
+					<div class="post-content">
+						<p>{{ article.texte }} </p>
+						<a href="blog-single.html" class="btn btn-main">Read More</a>
+					</div>
+				</div>
+			</div>
+            {# <tr>
+                <td>{{ article.id }}</td>
+                <td>{{ article.texte }}</td>
+                <td>{{ article.Titre }}</td>
+                <td>
+                    <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>
+                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
+                </td>
+            </tr> #}
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        {# </table> #}
+
+        <a href="{{ path('app_article_new') }}" class="btn btn-main">Create new</a>
+        </div>
+
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination post-pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="blog-grid.html">Prev</a></li>
+                    <li class="page-item"><a class="page-link" href="blog-grid.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="blog-grid.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="blog-grid.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="blog-grid.html">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% endblock %}
