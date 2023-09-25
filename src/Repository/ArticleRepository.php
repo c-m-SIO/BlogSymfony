@@ -45,4 +45,17 @@ class ArticleRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+    public function findByCategorie($categorie): ?array
+    {
+       // dd($categorie);
+        return $this->createQueryBuilder('a')
+            ->join('a.categorie', 'c')
+            ->andWhere('c.id = :categorie')
+            ->setParameter('categorie', $categorie)
+            ->orderBy('a.texte', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }

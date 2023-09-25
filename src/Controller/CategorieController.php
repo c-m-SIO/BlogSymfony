@@ -19,6 +19,7 @@ class CategorieController extends AbstractController
     {
         return $this->render('categorie/index.html.twig', [
             'categories' => $categorieRepository->findAll(),
+            
         ]);
     }
 
@@ -77,5 +78,13 @@ class CategorieController extends AbstractController
         }
 
         return $this->redirectToRoute('app_categorie_index', [], Response::HTTP_SEE_OTHER);
+    }
+
+    public function allCat(CategorieRepository $categorieRepository): Response
+    {
+        return $this->render('ListeCategories.html.twig', [
+            'categories' => $categorieRepository->findAll(),
+            
+        ]);
     }
 }
