@@ -89,4 +89,12 @@ class ArticleController extends AbstractController
         ]);
     }
 
+    #[Route('/', name: 'app_article_index', methods: ['GET'])]
+    public function dernierArticle(ArticleRepository $articleRepository): Response
+    {
+        return $this->render('dernierArticles.html.twig', [
+            'articles' => $articleRepository->findDernierArticles(),
+        ]);
+    }
+
 }

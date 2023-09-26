@@ -58,4 +58,15 @@ class ArticleRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+
+    public function findDernierArticles(): array
+   {
+       return $this->createQueryBuilder('a')
+           
+           ->orderBy('a.id', 'DESC')
+           ->setMaxResults(3)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
 }
