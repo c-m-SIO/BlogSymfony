@@ -1,3 +1,3 @@
 {% for categorie in categories %}
-	<li class="dropdown-item @@service"><a class="nav-link" href="{{path('app_article_categorie', {'type': categorie.type})}}">{{ categorie.type }}</a></li>
+	<li class="dropdown-item @@service"><a class="nav-link" href="{{path('app_article_categorie', {'slug': categorie.slug})}}">{{ categorie.type }}</a></li>
 {% endfor %}

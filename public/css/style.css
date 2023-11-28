@@ -71,19 +71,19 @@ a:focus,
 a:hover {
   text-decoration: none;
   outline: 0;
-  color: #655E7A;
+  color: #fab637;
 }
 
 blockquote {
   font-size: 18px;
-  border-left: 5px solid #655E7A;
+  border-left: 5px solid #fab637;
   padding: 20px 40px;
   text-align: left;
   color: #777;
 }
 
 .navbar-toggle .icon-bar {
-  background: #655E7A;
+  background: #fab637;
 }
 
 input[type=email],
@@ -100,7 +100,7 @@ input[type=password]:focus,
 input[type=text]:focus,
 input[type=tel]:focus {
   box-shadow: none;
-  border: 1px solid #655E7A;
+  border: 1px solid #fab637;
 }
 
 .form-control {
@@ -109,7 +109,7 @@ input[type=tel]:focus {
 }
 .form-control:focus {
   box-shadow: none;
-  border: 1px solid #655E7A;
+  border: 1px solid #fab637;
 }
 
 .slick-slide {
@@ -117,7 +117,7 @@ input[type=tel]:focus {
 }
 
 .btn-main, .btn-small, .btn-transparent {
-  background: #655E7A;
+  background: #fab637;
   color: #fff;
   display: inline-block;
   font-size: 14px;
@@ -143,18 +143,18 @@ input[type=tel]:focus {
   color: #fff;
 }
 .btn-solid-border:hover {
-  border: 1px solid #655E7A;
-  background: #655E7A;
+  border: 1px solid #fab637;
+  background: #fab637;
 }
 
 .btn-transparent {
   background: transparent;
   padding: 0;
-  color: #655E7A;
+  color: #fab637;
 }
 .btn-transparent:hover {
   background: transparent;
-  color: #655E7A;
+  color: #fab637;
 }
 
 .btn-large {
@@ -242,19 +242,19 @@ input[type=tel]:focus {
 }
 
 .bg-primary {
-  background: #655E7A !important;
+  background: #fab637 !important;
 }
 
 .bg-primary-dark {
-  background: #4d485d !important;
+  background: #faa937 !important;
 }
 
 .bg-primary-darker {
-  background: #353240 !important;
+  background: #fa7537 !important;
 }
 
 .bg-dark {
-  background: #202122 !important;
+  background: #fa5437 !important;
 }
 
 .section {
@@ -388,7 +388,7 @@ input[type=tel]:focus {
   transform: translate(0px, 0px);
   opacity: 1;
   visibility: visible;
-  color: #777;
+  color: rgb(253, 206, 103);
   transform: translateY(0px);
 }
 .dropdown-slide .dropdown-menu {
@@ -447,8 +447,8 @@ input[type=tel]:focus {
   margin-right: 5px;
 }
 .tabCommon .nav-tabs li a.active {
-  background-color: #655E7A;
-  border: 1px solid #655E7A;
+  background-color: #fab637;
+  border: 1px solid #fab637;
   color: #ffffff;
 }
 .tabCommon .nav-tabs a {
@@ -457,7 +457,7 @@ input[type=tel]:focus {
 }
 .tabCommon .nav-tabs a:hover {
   border: 1px solid transparent;
-  background: #655E7A;
+  background: #fab637;
   color: #fff;
 }
 .tabCommon .tab-content {
@@ -526,7 +526,7 @@ input[type=tel]:focus {
 
 .alert-solid {
   background: transparent;
-  color: #655E7A;
+  color: #fab637;
 }
 
 @media (max-width: 480px) {
@@ -552,13 +552,13 @@ input[type=tel]:focus {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #1d192c;
+  /*background: #1d192c;*/
   opacity: 0.8;
 }
 
 .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #655E7A !important;
+  background: #fab637 !important;
 }
 
 #success,
@@ -701,7 +701,7 @@ header .navbar-default .navbar-nav li a:hover {
 }
 .navigation .navbar .navbar-nav li.active > a {
   text-decoration: underline;
-  color: #655E7A;
+  color: #fab637;
 }
 .navigation .navbar .dropdown-menu {
   border-radius: 0;
@@ -730,7 +730,7 @@ header .navbar-default .navbar-nav li a:hover {
   transition: all 0.3s ease;
 }
 .navigation .navbar .dropdown-menu a:focus, .navigation .navbar .dropdown-menu a:hover {
-  background: #655E7A;
+  background: #fab637;
   color: #fff;
 }
 
@@ -776,7 +776,7 @@ header .navbar-default .navbar-nav li a:hover {
 
 .dropdown-submenu:hover > .dropdown-item,
 .dropdown-item:hover {
-  background: #655E7A;
+  background: #fab637;
   color: #fff !important;
 }
 
@@ -820,7 +820,7 @@ ul.dropdown-menu li {
   }
 }
 .slider {
-  background: url("../images/slider-bg.jpg") no-repeat;
+  background: url("https://images.unsplash.com/photo-1555452602-182792f833f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1311&q=80") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 0%;
@@ -894,7 +894,7 @@ ul.dropdown-menu li {
 }
 .service .service-item i {
   font-size: 60px;
-  color: #655E7A;
+  color: #fab637;
 }
 .service .service-item h4 {
   padding-top: 15px;
@@ -979,7 +979,7 @@ ul.dropdown-menu li {
 }
 
 .feature {
-  background: url("../img/featue-bg.jpg");
+  background: url("https://images.unsplash.com/photo-1632854270303-f5fdb97b697f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80");
   background-position: 50% 94px;
   display: block;
   position: relative;
@@ -1003,7 +1003,7 @@ ul.dropdown-menu li {
   margin-bottom: 20px;
 }
 .feature .btn-view-works {
-  background: #655E7A;
+  background: #fab637;
   color: #fff;
   padding: 10px 20px;
 }
@@ -1036,8 +1036,8 @@ ul.dropdown-menu li {
   transition: all 0.3s ease;
 }
 .portfolio-work .block .portfolio-menu .btn-group label.active {
-  background-color: #655E7A;
-  border-color: #655E7A;
+  background-color: #fab637;
+  border-color: #fab637;
   color: #fff;
 }
 
@@ -1299,7 +1299,7 @@ ul.dropdown-menu li {
 }
 .pricing-table .pricing-item li i {
   margin-right: 6px;
-  color: #655E7A;
+  color: #fab637;
 }
 .pricing-table .price-title {
   padding: 30px 0 20px;
@@ -1317,7 +1317,7 @@ ul.dropdown-menu li {
   margin-top: 5px;
 }
 .pricing-table .price-title .value {
-  color: #655E7A;
+  color: #fab637;
   font-size: 50px;
   padding: 10px 0;
 }
@@ -1378,7 +1378,7 @@ ul.dropdown-menu li {
 }
 .product-item .product-thumb .preview-meta li a:hover,
 .product-item .product-thumb .preview-meta li span:hover {
-  background: #655E7A;
+  background: #fab637;
   color: #fff;
 }
 .product-item:hover .product-thumb:before {
@@ -1805,9 +1805,9 @@ ul.dropdown-menu li {
 }
 
 .dashboard-menu .active {
-  background: #655E7A;
+  background: #fab637;
   color: #fff;
-  border: 1px solid #655E7A;
+  border: 1px solid #fab637;
 }
 .dashboard-menu li {
   padding: 0;
@@ -1916,7 +1916,7 @@ ul.dropdown-menu li {
   font-weight: 500;
 }
 .post-comments .comment-author a {
-  color: #655E7A;
+  color: #fab637;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -1927,7 +1927,7 @@ ul.dropdown-menu li {
   font-size: 12px;
 }
 .post-comments .comment-button {
-  color: #655E7A;
+  color: #fab637;
   display: inline-block;
   margin-left: 5px;
   font-size: 12px;
@@ -1937,7 +1937,7 @@ ul.dropdown-menu li {
   display: inline-block;
 }
 .post-comments .comment-button:hover {
-  color: #655E7A;
+  color: #fab637;
 }
 
 .post-excerpt {
@@ -1956,7 +1956,7 @@ ul.dropdown-menu li {
 .post-excerpt blockquote.quote-post p {
   line-height: 30px;
   font-size: 20px;
-  color: #655E7A;
+  color: #fab637;
   margin-bottom: 0;
 }
 
@@ -1984,7 +1984,7 @@ ul.dropdown-menu li {
   color: #000;
 }
 .next-prev a:hover {
-  color: #655E7A;
+  color: #fab637;
 }
 .next-prev .prev-post i {
   margin-right: 10px;
@@ -2003,7 +2003,7 @@ ul.dropdown-menu li {
   font-size: 16px;
 }
 .social-profile ul li a i:hover {
-  color: #655E7A;
+  color: #fab637;
 }
 
 .comments-section {
@@ -2047,7 +2047,7 @@ ul.dropdown-menu li {
   margin-bottom: 8px;
 }
 .comment-wrap .media .media-heading a {
-  color: #655E7A;
+  color: #fab637;
   font-size: 13px;
 }
 .comment-wrap .media .comment-meta {
@@ -2070,7 +2070,7 @@ ul.dropdown-menu li {
 .comment-reply-form input:focus,
 .comment-reply-form textarea:focus {
   box-shadow: none;
-  border: 1px solid #655E7A;
+  border: 1px solid #fab637;
 }
 .comment-reply-form textarea,
 .comment-reply-form .btn-main,
@@ -2080,14 +2080,14 @@ ul.dropdown-menu li {
 }
 
 .bg-1 {
-  background-image: url("../images/call-to-action-bg.jpg");
+  background-image: url("https://images.unsplash.com/photo-1620574542357-31f5a14a2416?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .bg-2 {
-  background: url("../images/featue-bg.jpg");
+  background: url("https://images.unsplash.com/photo-1569758884145-6a2e8a00e539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80s");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -2120,7 +2120,7 @@ ul.dropdown-menu li {
   transition: 0.3s;
 }
 .widget.widget-latest-post .media .media-heading a:hover {
-  color: #655E7A;
+  color: #fab637;
 }
 .widget.widget-latest-post .media p {
   font-size: 12px;
@@ -2138,7 +2138,7 @@ ul.dropdown-menu li {
   padding-right: 10px;
 }
 .widget.widget-category ul li a:hover {
-  color: #655E7A;
+  color: #fab637;
   padding-left: 20px;
 }
 .widget.widget-tag ul li {
@@ -2157,8 +2157,8 @@ ul.dropdown-menu li {
 }
 .widget.widget-tag ul li a:hover {
   color: #fff;
-  background: #655E7A;
-  border: 1px solid #655E7A;
+  background: #fab637;
+  border: 1px solid #fab637;
 }
 
 /*=================================================================
@@ -2188,10 +2188,10 @@ ul.dropdown-menu li {
   margin-bottom: 20px;
 }
 .post .post-title a {
-  color: #655E7A;
+  color: #fab637;
 }
 .post .post-title a:hover {
-  color: #655E7A;
+  color: #fab637;
 }
 .post .post-meta {
   font-size: 13px;
@@ -2209,7 +2209,7 @@ ul.dropdown-menu li {
   color: #909090;
 }
 .post .post-meta ul li a:hover {
-  color: #655E7A;
+  color: #fab637;
 }
 .post .post-meta .post-author {
   color: #000;
@@ -2247,12 +2247,12 @@ ul.dropdown-menu li {
 }
 .post-pagination > li > a:hover {
   color: #fff;
-  background: #655E7A;
-  border: 1px solid #655E7A;
+  background: #fab637;
+  border: 1px solid #fab637;
 }
 .post-pagination > li.active > a {
-  background: #655E7A !important;
-  border: 1px solid #655E7A !important;
+  background: #fab637 !important;
+  border: 1px solid #fab637 !important;
 }
 .post-pagination > li:first-child > a,
 .post-pagination > li:last-child > a {
@@ -2264,7 +2264,7 @@ ul.dropdown-menu li {
 }
 
 .coming-soon {
-  background: url("../images/backgrounds/coming-soon.jpg");
+  background: url("https://media.istockphoto.com/id/921897410/fr/photo/national-archives-building-et-ciel-clair.jpg?s=1024x1024&w=is&k=20&c=6dJC64nGPays4pqdEyMsS6F2DB3KMzigUZ7R2K3G-No=");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -2641,7 +2641,7 @@ ul.dropdown-menu li {
   z-index: 999;
   height: 40px;
   width: 40px;
-  background: #655E7A;
+  background: #fab637;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;

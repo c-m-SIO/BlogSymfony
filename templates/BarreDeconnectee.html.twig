@@ -29,10 +29,15 @@
 								</ul>
 							</div>
                             <li class="nav-item @@service"><a class="nav-link" href="{{path('app_utilisateur_index')}}">Utilisateur</a></li>
+							<li class="nav-item @@service"><a class="nav-link" href="{{path('app_apropos')}}">à propos</a></li>
 
 							
 							<li class="nav-item @@contact"><a class="nav-link" href="{{path('app_login')}}">Se connecter</a></li>
 						</ul>
+						{{ render(controller(
+							'App\\Controller\\ArticleController::form'
+						)) }}
+						
 					</div>
 				</nav>
 			</div>

@@ -18,7 +18,17 @@
 							</li>
 							<li class="nav-item @@service"><a class="nav-link" href="{{path('app_article_index')}}">Article</a></li>
 
-							<li class="nav-item @@service"><a class="nav-link" href="{{path('app_categorie_index')}}">Categorie</a></li>
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Categories
+								</button>
+								<ul class="dropdown-menu">
+								{{ render(controller(
+									'App\\Controller\\CategorieController::allCat'
+								)) }}
+								
+								</ul>
+							</div>
 
                             <li class="nav-item @@service"><a class="nav-link" href="{{path('app_utilisateur_index')}}">Utilisateur</a></li>
 
@@ -27,6 +37,9 @@
 							
 							<li class="nav-item @@contact"><a class="nav-link" href="{{path('app_logout')}}">Déconnexion</a></li>
 						</ul>
+						{{ render(controller(
+							'App\\Controller\\ArticleController::form'
+						)) }}
 					</div>
 				</nav>
 			</div>

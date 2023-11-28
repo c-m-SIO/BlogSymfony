@@ -69,4 +69,16 @@ class ArticleRepository extends ServiceEntityRepository
            ->getResult()
        ;
    }
+
+   public function findByMot($mot): array
+   {
+       return $this->createQueryBuilder('a')
+    
+            ->setParameter('mot', $mot)
+           ->orderBy('a.id', 'DESC')
+           ->andWhere('a.Titre like :mot or a.texte like :mot')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
 }

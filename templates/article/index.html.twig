@@ -55,10 +55,16 @@
 					</div>
 					<div class="post-content">
 						<p>{{ article.texte }} </p>
-						<a href="blog-single.html" class="btn btn-main">Read More</a>
+						<a href="{{ path('app_article_show', {'id': article.id}) }}" class="btn btn-main">En savoir plus</a>
+                        {% if is_granted('POST_EDIT', article) %}
+    
+                            <a href="{{ path('app_article_edit', {'id': article.id}) }}" class="btn btn-main">edit</a>
+
+                        {% endif %}
 					</div>
 				</div>
 			</div>
+            
             {# <tr>
                 <td>{{ article.id }}</td>
                 <td>{{ article.texte }}</td>
