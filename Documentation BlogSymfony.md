@@ -49,19 +49,35 @@ sudo apt purge php8.1*
 
 
 ## Déploiement
+
+### Téléchargement
 Une fois tous les composants nécessaires installés, il ne reste plus qu'à déployer le projet.
 
 Premièrement il faut télécharger le projet disponible sur github à l'adresse: ```https://github.com/c-m-SIO/blogSymfonyCours.git``` 
 
+### Base de données
 Ensuite il faut créer une base de données MariaDb en local (cours de cybersecu de 1ere année les mecs !!!).
 Pour connecter la BDD au projet, il faut aller dans le fichier ```.env```, décommenter la ligne 28 et y insérer les bonnes informations:
 ```sh
 DATABASE_URL="mysql://NomUtilisateur:MotDePasse@addresse:port/NomDelaBDD?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
 ```
 
+### Redirection
+Dernière étape du déploiement il faut rediriger l'url vers l'affichage du blog.
+Pour cela, aller dans le fichier ``etc/apache2/sites-available`` et modifier le fichier ``000-default.conf``.
+Ajouter le code:
+```sh
+    DocumentRoot Chemin_du_projet/public
+    <Directory /chemin_du_projet/public>
+        AllowOverride None
+        Require all granted
+        FallbackResource /index.php
+    </Directory>
+```
+Lien de la documentation symfony (si besoin): ``https://symfony.com/doc/current/setup/web_server_configuration.html``.
 
 ## Composer
-```
+```sh
 apt install wget php-cli php-xml php-zip php-mbstring unzip -y
 wget -O composer-setup.php https://getcomposer.org/installer
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
@@ -72,8 +88,16 @@ Dans le fichier du projet:
 composer require
 ```
 
+## Charger la base de données
+Dans le fichier du projet, ouvrir un cmd et exécuter les commandes suivantes:
+```sh
+php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+```
+
 # Terminé !
-> "Félicitation UwU"
+> "Félicitations UwU"
 ![image](https://ih1.redbubble.net/image.985111156.7333/flat,750x,075,f-pad,750x1000,f8f8f8.jpg)
 
 
