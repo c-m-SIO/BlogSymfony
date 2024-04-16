@@ -12,14 +12,15 @@ class ArticleVoter extends Voter
 {
     public const EDIT = 'POST_EDIT';
     public const VIEW = 'POST_VIEW';
+    public const USER = 'POST_USER';
 
     protected function supports(string $attribute, mixed $subject): bool
     {
 
         // replace with your own logic
         // https://symfony.com/doc/current/security/voters.html
-        return in_array($attribute, [self::EDIT, self::VIEW])
-            && $subject instanceof \App\Entity\Article;
+        return in_array($attribute, [self::EDIT, self::VIEW, self::USER])
+            && $subject instanceof \App\Entity\Article || $subject instanceof \App\Entity\Utilisateur ;
     }
 
     protected function voteOnAttribute(string $attribute, mixed $subject, TokenInterface $token): bool
@@ -40,6 +41,11 @@ class ArticleVoter extends Voter
             case self::VIEW:
                 // logic to determine if the user can VIEW
                 // return true or false
+                break;
+            case self::USER:
+                // logic to determine if the user can EDIT
+                // return true or false
+                return $user === $subject;
                 break;
         }
 

@@ -8,8 +8,8 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-        <h1>Article index</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quibusdam.</p>
+        <h1>Liste des articles</h1>
+          <p>Consultez l'article que vous voulez !</p>
         </div>
       </div>
     </div>
@@ -56,7 +56,7 @@
 					<div class="post-content">
 						<p>{{ article.texte }} </p>
 						<a href="{{ path('app_article_show', {'id': article.id}) }}" class="btn btn-main">En savoir plus</a>
-                        {% if is_granted('POST_EDIT', article) %}
+                        {% if is_granted('POST_EDIT', article) or is_granted('ROLE_ADMIN') %}
     
                             <a href="{{ path('app_article_edit', {'id': article.id}) }}" class="btn btn-main">edit</a>
 

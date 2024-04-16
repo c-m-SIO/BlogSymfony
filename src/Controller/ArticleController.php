@@ -59,23 +59,32 @@ class ArticleController extends AbstractController
         ]);
     }
 
-    #[IsGranted('POST_EDIT', 'article', 'Vous n\'avez pas les droits', 403)]
+    // #[IsGranted(
+    //     new Expression(
+    //         'is_granted("ROLE_ADMIN", article) or ' .
+    //         'is_granted("POST_EDIT", article)'
+    //     ),
+        
+    // )]
+    //#[IsGranted('POST_EDIT', 'article', 'Vous n\'avez pas les droits', 403)], #[IsGranted('ROLE_ADMIN', 'article', 'Vous n\'avez pas les droits', 403)]
     #[Route('/{id}/edit', name: 'app_article_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Article $article, EntityManagerInterface $entityManager): Response
     {
-        $form = $this->createForm(ArticleType::class, $article);
-        $form->handleRequest($request);
+        if ($this->isGranted('POST_EDIT') || $this->isGranted('ROLE_ADMIN')){
+            $form = $this->createForm(ArticleType::class, $article);
+            $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->flush();
+            if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager->flush();
 
-            return $this->redirectToRoute('app_article_index', [], Response::HTTP_SEE_OTHER);
+                return $this->redirectToRoute('app_article_index', [], Response::HTTP_SEE_OTHER);
+            }
+
+            return $this->render('article/edit.html.twig', [
+                'article' => $article,
+                'form' => $form,
+            ]);
         }
-
-        return $this->render('article/edit.html.twig', [
-            'article' => $article,
-            'form' => $form,
-        ]);
     }
 
     #[Route('/{id}', name: 'app_article_delete', methods: ['POST'])]

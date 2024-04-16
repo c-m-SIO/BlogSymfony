@@ -24,7 +24,7 @@
 
     <a href="{{ path('app_article_index') }}" class="btn btn-main">back to list</a>
 
-    {% if is_granted('POST_EDIT', article) %}
+    {% if is_granted('POST_EDIT', article) or is_granted('ROLE_ADMIN', article) %}
     
         <a href="{{ path('app_article_edit', {'id': article.id}) }}" class="btn btn-main">edit</a>
 
